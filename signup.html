@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterSolis InfoTech - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h2 {
+            color: white;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+        }
+
+        .nav-links a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        
+        .signup-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .signup-container h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .signup-container p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"],
+        .signup-container input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease; 
+        }
+
+        
+        .signup-container input.invalid {
+            border-color: red;
+        }
+
+        
+        .signup-container input.valid {
+            border-color: green;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+
+        .signup-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            opacity: 0.6; 
+            pointer-events: none; 
+        }
+
+        .signup-container button.enabled {
+            opacity: 1; 
+            pointer-events: auto;
+        }
+
+        .signup-container button:hover {
+            background-color: #555;
+        }
+
+        .login-link {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
+
+        
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin: 5px 0;
+            text-align: left;
+        }
+
+        /* Dropdown content links */
+        .dropdown-content a {
+            color: white; /* default color */
+            text-decoration: none;
+            padding: 8px;
+            display: block;
+        }
+
+        /* Change text color to blue when the dropdown is active (hover effect) */
+        .dropdown:hover .dropdown-content a {
+            color: rgb(0, 0, 0);
+        }
+
+        /* Hover effect for the links inside the dropdown */
+        .dropdown-content a:hover {
+            background-color: #6a6868;
+            color: blue; /* Make the text blue when hovered */
+        }
+
+        /* Make sure to have the dropdown content visible when the dropdown is open */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="text">MASTERSOLIS INFOTECH</h2>
+                <img src="https://static.wixstatic.com/media/66b930_db1d91061a2c4cd8bad3a619207b9f74~mv2.jpg/v1/fill/w_138,h_90,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Screenshot%202023-12-07%20205436_edited.jpg" alt="MASTERSOLIS INFOTECH">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blogs.html">Blogs</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="groups.html">Groups</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="account.html">My Account</a>
+                        <a href="signup.html">SignUp</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <p>Join us at MasterSolis InfoTech and unlock new possibilities.</p>
+        
+        <form id="signupForm">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required pattern="^[A-Za-z]{3,}$" title="First name must be at least 3 alphabetic characters" oninput="validateForm()">
+            <div id="firstNameError" class="error-message"></div>
+
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required pattern="^[A-Za-z]+$" title="Last name must only contain alphabetic characters" oninput="validateForm()">
+            <div id="lastNameError" class="error-message"></div>
+
+            <input type="email" id="email" name="email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com" title="Email must be in the format example@gmail.com" oninput="validateForm()">
+            <div id="emailError" class="error-message"></div>
+
+            <input type="password" id="password" name="password" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$" title="Password must be at least 10 characters and contain at least one letter, one number, and one special character" oninput="validateForm()">
+            <div id="passwordError" class="error-message"></div>
+
+            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required pattern="^\d{10}$" title="Mobile number must be exactly 10 digits" oninput="validateForm()">
+            <div id="mobileError" class="error-message"></div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required onchange="validateForm()">
+                <label for="terms">I agree to the <a href="terms.html">Terms & Conditions</a></label>
+            </div>
+            <div id="termsError" class="error-message"></div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="newsletter" name="newsletter" onchange="validateForm()">
+                <label for="newsletter">Subscribe to our newsletter</label>
+            </div>
+
+            <button type="submit" id="registerBtn" class="enabled" disabled>Register</button>
+        </form>
+
+        <a href="login.html" class="login-link">Already a member? Log in</a>
+    </div>
+
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById('firstName');
+            const lastName = document.getElementById('lastName');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const mobile = document.getElementById('mobile');
+            const terms = document.getElementById('terms').checked;
+            const registerBtn = document.getElementById('registerBtn');
+
+            
+            document.getElementById('firstNameError').innerText = '';
+            document.getElementById('lastNameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('passwordError').innerText = '';
+            document.getElementById('mobileError').innerText = '';
+            document.getElementById('termsError').innerText = '';
+
+            let valid = true;
+
+            
+            if (!firstName.validity.valid) {
+                document.getElementById('firstNameError').innerText = 'First name must be at least 3 alphabetic characters.';
+                valid = false;
+                firstName.classList.add('invalid');
+            } else {
+                firstName.classList.add('valid');
+                firstName.classList.remove('invalid');
+            }
+
+           
+            if (!lastName.validity.valid) {
+                document.getElementById('lastNameError').innerText = 'Last name must only contain alphabetic characters.';
+                valid = false;
+                lastName.classList.add('invalid');
+            } else {
+                lastName.classList.add('valid');
+                lastName.classList.remove('invalid');
+            }
+
+            
+            if (!email.validity.valid) {
+                document.getElementById('emailError').innerText = 'Email must be in the format example@gmail.com.';
+                valid = false;
+                email.classList.add('invalid');
+            } else {
+                email.classList.add('valid');
+                email.classList.remove('invalid');
+            }
+
+            
+            if (!password.validity.valid) {
+                document.getElementById('passwordError').innerText = 'Password must be at least 10 characters and contain at least one letter, one number, and one special character.';
+                valid = false;
+                password.classList.add('invalid');
+            } else {
+                password.classList.add('valid');
+                password.classList.remove('invalid');
+            }
+
+            
+            if (!mobile.validity.valid) {
+                document.getElementById('mobileError').innerText = 'Mobile number must be exactly 10 digits.';
+                valid = false;
+                mobile.classList.add('invalid');
+            } else {
+                mobile.classList.add('valid');
+                mobile.classList.remove('invalid');
+            }
+
+            
+            if (!terms) {
+                document.getElementById('termsError').innerText = 'You must agree to the terms and conditions.';
+                valid = false;
+            }
+
+            
+            if (valid) {
+                registerBtn.disabled = false;
+                registerBtn.classList.add('enabled');
+            } else {
+                registerBtn.disabled = true;
+                registerBtn.classList.remove('enabled');
+            }
+        }
+
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Registration successful!');
+            window.location.href = 'login.html'; 
+        });
+    </script>
+
+</body>
+</html>

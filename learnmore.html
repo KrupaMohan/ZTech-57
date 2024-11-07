@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More - MasterSolis InfoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        .navbar .logo img {
+            height: 50px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar ul li a.active {
+            font-weight: bold;
+            color: #f0f0f0;
+        }
+
+        /* Learn More Hero Section */
+        .hero-section {
+            background-color: #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons button {
+            padding: 12px 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .hero-buttons button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero-buttons button:hover {
+            background-color: #777;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Wrapper for dynamic boxes */
+        .reason-container-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px;
+            animation: slideLeft 15s infinite linear;
+        }
+
+        /* Reason Box Style */
+        .reason-container {
+            min-width: 300px;
+            margin-right: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: box-shadow 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .reason-container:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .reason-container h3 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .reason-container p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Animation to move the boxes */
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://static.wixstatic.com/media/66b930_db1d91061a2c4cd8bad3a619207b9f74~mv2.jpg/v1/fill/w_138,h_90,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Screenshot%202023-12-07%20205436_edited.jpg" alt="MasterSolis Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Internships</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">More</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="groups.html">Groups</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="account.html">My Account</a>
+                    <a href="signup.html">SignUp</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Why Choose MasterSolis InfoTech?</h1>
+            <p>We offer unique and effective solutions to meet your business and career development needs. Here's why you should choose us.</p>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+
+        <!-- Wrapper for Dynamic Box Shadows -->
+        <div class="reason-container-wrapper">
+
+            <!-- Reason 1 -->
+            <div class="reason-container">
+                <h3>01</h3>
+                <p>At MasterSolis InfoTech, we are committed to providing our clients with the highest quality IT solutions available. We understand that every business has unique needs, which is why we offer a range of customizable services to address any technical challenge you may face.</p>
+            </div>
+
+            <!-- Reason 2 -->
+            <div class="reason-container">
+                <h3>02</h3>
+                <p>Our training programs are designed by experts in the field with years of industry experience. Our training methods are interactive and practical, ensuring that our clients are well-equipped to apply what they learn to real-world situations.</p>
+            </div>
+
+            <!-- Reason 3 -->
+            <div class="reason-container">
+                <h3>03</h3>
+                <p>MasterSolis InfoTech offers freelance services for businesses, including website and software development, content management, and more. With professional-grade services, we cater to startups and established brands alike.</p>
+            </div>
+
+            <!-- Reason 4 -->
+            <div class="reason-container">
+                <h3>04</h3>
+                <p>We offer internships that provide students with real-world experience in the tech industry. Our interns work on challenging projects and collaborate with experienced professionals, gaining valuable insights and mentorship.</p>
+            </div>
+
+            <!-- Reason 5 -->
+            <div class="reason-container">
+                <h3>05</h3>
+                <p>Our certification-based courses cover topics from ITSM to Project Management, Business Analysis to UX Design. With flexible pricing models, we support lifelong learning for professionals at all levels.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+    </script>
+
+</body>
+</html>

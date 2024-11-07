@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn More - MasterSolis InfoTech</title>
+    <title>Find Out More - MasterSolis InfoTech</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -13,6 +13,7 @@
             background-color: #f0f0f0;
         }
 
+        /* Navbar - Same as homepage */
         .navbar {
             display: flex;
             align-items: center;
@@ -47,7 +48,35 @@
             color: #f0f0f0;
         }
 
-        /* Learn More Hero Section */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        /* Hero Section */
         .hero-section {
             background-color: #333;
             color: white;
@@ -101,17 +130,15 @@
             margin-bottom: 30px;
         }
 
-        /* Wrapper for dynamic boxes */
         .reason-container-wrapper {
             display: flex;
             justify-content: flex-start;
             width: 100%;
             overflow: hidden;
             padding: 20px;
-            animation: slideLeft 15s infinite linear;
+            flex-wrap: wrap; /* Allowing wrapping of reasons */
         }
 
-        /* Reason Box Style */
         .reason-container {
             min-width: 300px;
             margin-right: 30px;
@@ -121,13 +148,14 @@
             text-align: center;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            transition: box-shadow 0.3s ease-in-out;
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px; /* Ensures some spacing below each box */
         }
 
+        /* Zoom In Effect on Hover */
         .reason-container:hover {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);  /* Slight zoom effect */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
         }
 
         .reason-container h3 {
@@ -141,25 +169,11 @@
             color: #666;
         }
 
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* Animation to move the boxes */
-        @keyframes slideLeft {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Navbar - Same as homepage -->
     <nav class="navbar">
         <div class="logo">
             <img src="https://static.wixstatic.com/media/66b930_db1d91061a2c4cd8bad3a619207b9f74~mv2.jpg/v1/fill/w_138,h_90,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Screenshot%202023-12-07%20205436_edited.jpg" alt="MasterSolis Logo">
@@ -228,14 +242,17 @@
             <!-- Reason 5 -->
             <div class="reason-container">
                 <h3>05</h3>
-                <p>Our certification-based courses cover topics from ITSM to Project Management, Business Analysis to UX Design. With flexible pricing models, we support lifelong learning for professionals at all levels.</p>
+                <p>Our customer support is unparalleled. We provide 24/7 assistance and dedicated support to ensure that our clients receive timely help whenever needed, making us a reliable partner in all their tech-related endeavors.</p>
             </div>
 
         </div>
     </section>
 
     <script>
+        // Scroll to the bottom when the page loads
+        window.onload = function() {
+            window.scrollTo(0, document.body.scrollHeight);
+        };
     </script>
-
 </body>
 </html>

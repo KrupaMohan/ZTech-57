@@ -6,7 +6,7 @@
     <title>Contact Us - MASTERSOLIS INFOTECH</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Background Image for the Body */
+        
         body {
             background-image: url('https://st2.depositphotos.com/2714617/8216/i/450/depositphotos_82164860-stock-photo-contact-global-concept-top-view.jpg'); /* Replace with your image path */
             background-size: cover;
@@ -16,14 +16,14 @@
             padding: 0;
         }
 
-        /* Basic styling for the contact form */
+        
         .contact-form {
             max-width: 600px;
             margin: 50px auto;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            background-color: rgba(255, 255, 255, 0.7); /* Translucent background */
+            background-color: rgba(255, 255, 255, 0.7); 
         }
 
         .contact-form h2 {
@@ -73,20 +73,20 @@
             border-radius: 5px;
             margin-top: 20px;
             cursor: pointer;
-            opacity: 0.6; /* Initially disabled */
-            pointer-events: none; /* Disable the button */
+            opacity: 0.6; 
+            pointer-events: none; 
         }
 
         .contact-form button.enabled {
-            opacity: 1; /* Button enabled style */
-            pointer-events: auto; /* Enable the button */
+            opacity: 1; 
+            pointer-events: auto; 
         }
 
         .contact-form button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #45a049; 
         }
 
-        /* Success message style */
+        
         .success-message {
             text-align: center;
             margin-top: 20px;
@@ -94,7 +94,7 @@
             font-size: 1.2em;
         }
 
-        /* Navbar Styling */
+        
         header .navbar {
             display: flex;
             justify-content: space-between;
@@ -138,7 +138,7 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -168,7 +168,7 @@
         </nav>
     </header>
 
-    <!-- Contact Form Section -->
+    
     <section class="contact-form-section">
         <div class="contact-form">
             <h2>Contact Us</h2>
@@ -191,13 +191,13 @@
                 <button type="button" id="submit-button" onclick="submitForm()">Send Message</button>
             </form>
 
-            <!-- Success message style -->
+            
             <div id="success-message" class="success-message" style="display: none;">Your message has been submitted!</div>
         </div>
     </section>
 
     <script>
-        // Function to enable or disable the submit button based on field validity
+        
         function validateForm() {
             let name = document.getElementById('name');
             let phone = document.getElementById('phone');
@@ -205,33 +205,33 @@
             let message = document.getElementById('message');
             let button = document.getElementById('submit-button');
 
-            // Check if all fields are valid
+            
             if (name.validity.valid && phone.validity.valid && email.validity.valid && message.validity.valid) {
-                button.classList.add('enabled'); // Enable the button if all fields are valid
+                button.classList.add('enabled'); 
                 button.disabled = false;
             } else {
-                button.classList.remove('enabled'); // Keep the button disabled if any field is invalid
+                button.classList.remove('enabled'); 
                 button.disabled = true;
             }
         }
 
-        // Function to handle form submission
+        
         function submitForm() {
             let successMessage = document.getElementById('success-message');
             let button = document.getElementById('submit-button');
             
-            // Only show success message if form is valid
+            
             if (document.getElementById('contact-form').checkValidity()) {
-                successMessage.style.display = 'block'; // Show success message
-                button.disabled = true; // Disable the button after submission
-                button.classList.remove('enabled'); // Remove the 'enabled' class
+                successMessage.style.display = 'block'; 
+                button.disabled = true; 
+                button.classList.remove('enabled'); 
                 setTimeout(() => {
-                    successMessage.style.display = 'none'; // Hide success message after 5 seconds
+                    successMessage.style.display = 'none'; 
                 }, 5000);
             }
         }
 
-        // Initial form validation check
+        
         document.addEventListener('DOMContentLoaded', validateForm);
     </script>
 </body>
